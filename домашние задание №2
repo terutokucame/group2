@@ -1,0 +1,7 @@
+x=int(input("введите число:"))
+if x==1:
+    print(x,"рубль")
+elif x>=5 :
+    print(x,"рублей")
+else:
+    print(x, "рубля")
