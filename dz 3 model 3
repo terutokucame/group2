@@ -1,0 +1,16 @@
+import numpy as np
+from sklearn.cluster import DBSCAN
+import matplotlib.pyplot as plt
+
+np.random.seed(0)
+x = np.random.randn(100, 2)
+
+dbscan = DBSCAN(eps=0.3, min_samples=5)
+
+clusters = dbscan.fit_predict(x)
+
+plt.scatter(x[:, 0], x[:, 1], c=clusters, cmap='viridis')
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.title("DBSCAN Clustering")
+plt.show()
